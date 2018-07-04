@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.example.onlineAgendaApp.model.OnlineAgenda;
 import org.example.onlineAgendaApp.model.Priority;
 import org.example.onlineAgendaApp.model.Task;
@@ -15,7 +16,7 @@ import org.example.onlineAgendaApp.model.Task;
  * Test your Online Agenda
  *
  */
-public class App {
+public class AppPhase1 {
 
 	private static OnlineAgenda onlineAgenda;
 	private static List<Integer> idList = new ArrayList<>();
@@ -35,6 +36,8 @@ public class App {
 		printAllTasksInTheAgenda();
 
 		System.out.println("-----------------------------");
+		
+		printAllTasksForToday();
 	}
 
 	private static void initializeAgenda() {
@@ -138,5 +141,37 @@ public class App {
 				}
 			}
 		}
+		
+		System.out.println("URGENT tasks for today:");
+		if(CollectionUtils.isEmpty(urgentTasks)) {
+			System.out.println("You have no URGENT tasks");
+		} else {
+			for(Task task : urgentTasks) {
+				System.out.println(task.toString());
+			}
+		}
+		
+		System.out.println("-----------------------------");
+		
+		System.out.println("IMPORTANT tasks for today:");
+		if(CollectionUtils.isEmpty(importantTasks)) {
+			System.out.println("You have no IMPORTANT tasks");
+		} else {
+			for(Task task : importantTasks) {
+				System.out.println(task.toString());
+			}
+		}
+		
+		System.out.println("-----------------------------");
+		
+		System.out.println("TRIVIAL tasks for today:");
+		if(CollectionUtils.isEmpty(trivialTasks)) {
+			System.out.println("You have no TRIVIAL tasks");
+		} else {
+			for(Task task : trivialTasks) {
+				System.out.println(task.toString());
+			}
+		}
+		
 	}
 }
