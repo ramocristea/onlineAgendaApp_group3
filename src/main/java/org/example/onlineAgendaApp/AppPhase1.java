@@ -3,6 +3,9 @@ package org.example.onlineAgendaApp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -14,6 +17,8 @@ import org.example.onlineAgendaApp.model.Task;
 
 /**
  * Test your Online Agenda
+ *
+ *	TODO extract CRUD operations
  *
  */
 public class AppPhase1 {
@@ -141,6 +146,15 @@ public class AppPhase1 {
 				}
 			}
 		}
+		
+		Collections.sort(urgentTasks, new Comparator<Task>() {
+
+			@Override
+			public int compare(Task o1, Task o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		});
 		
 		System.out.println("URGENT tasks for today:");
 		if(CollectionUtils.isEmpty(urgentTasks)) {
