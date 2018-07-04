@@ -4,9 +4,18 @@ import java.time.LocalDateTime;
 
 public class Task {
 
+	private int id;
 	private LocalDateTime targetCompletionDate;
 	private Priority priority;
 	private String description;
+	
+	public Task() {};
+	
+	public Task(LocalDateTime targetCompletionDate, Priority priority, String description) {
+		this.targetCompletionDate = targetCompletionDate;
+		this.priority = priority;
+		this.description = description;
+	}
 
 	public LocalDateTime getTargetCompletionDate() {
 		return targetCompletionDate;
@@ -30,6 +39,14 @@ public class Task {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
@@ -61,6 +78,12 @@ public class Task {
 		} else if (!targetCompletionDate.equals(other.targetCompletionDate))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", targetCompletionDate=" + targetCompletionDate + ", priority=" + priority
+				+ ", description=" + description + "]";
 	}
 
 }
