@@ -3,7 +3,6 @@ package org.example.onlineAgendaApp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -32,7 +31,8 @@ public class AppPhase1 {
 
 		System.out.println("-----------------------------");
 
-		addTaskToAgenda(LocalDateTime.of(2018, 7, 4, 17, 50), "New task for today", Priority.IMPORTANT);
+		addTaskToAgenda(LocalDateTime.of(2018, 7, 5, 17, 50), "New task for today", Priority.IMPORTANT);
+		addTaskToAgenda(LocalDateTime.of(2018, 7, 5, 19, 50), "New task for today 2", Priority.IMPORTANT);
 		printAllTasksInTheAgenda();
 
 		System.out.println("-----------------------------");
@@ -151,8 +151,10 @@ public class AppPhase1 {
 
 			@Override
 			public int compare(Task o1, Task o2) {
-				// TODO Auto-generated method stub
-				return 0;
+				if(o1.getTargetCompletionDate() == null && o2.getTargetCompletionDate() != null) {
+					return -1;
+				}
+				return o1.getTargetCompletionDate().compareTo(o2.getTargetCompletionDate());
 			}
 		});
 		
