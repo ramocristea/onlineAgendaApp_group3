@@ -1,4 +1,4 @@
-package org.example.onlineAgendaApp.model;
+package org.example.onlineagendaapp.model;
 
 import java.util.ArrayList;
 import java.util.List;

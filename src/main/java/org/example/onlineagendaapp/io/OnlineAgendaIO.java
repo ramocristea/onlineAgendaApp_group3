@@ -1,6 +1,6 @@
-package org.example.onlineAgendaApp.io;
+package org.example.onlineagendaapp.io;
 
-import org.example.onlineAgendaApp.model.OnlineAgenda;
+import org.example.onlineagendaapp.model.OnlineAgenda;
 
 public interface OnlineAgendaIO {
 	

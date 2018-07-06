@@ -1,7 +1,7 @@
-package org.example.onlineAgendaApp.io.impl;
+package org.example.onlineagendaapp.io.impl;
 
-import org.example.onlineAgendaApp.io.OnlineAgendaIO;
-import org.example.onlineAgendaApp.model.OnlineAgenda;
+import org.example.onlineagendaapp.io.OnlineAgendaIO;
+import org.example.onlineagendaapp.model.OnlineAgenda;
 
 public class FileOnlineAgendaIO implements OnlineAgendaIO {
 

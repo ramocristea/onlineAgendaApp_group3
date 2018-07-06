@@ -1,4 +1,4 @@
-package org.example.onlineAgendaApp;
+package org.example.onlineagendaapp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.example.onlineAgendaApp.model.OnlineAgenda;
-import org.example.onlineAgendaApp.model.Priority;
-import org.example.onlineAgendaApp.model.Task;
+import org.example.onlineagendaapp.model.OnlineAgenda;
+import org.example.onlineagendaapp.model.Priority;
+import org.example.onlineagendaapp.model.Task;
 
 /**
  * Test your Online Agenda
@@ -20,7 +20,7 @@ import org.example.onlineAgendaApp.model.Task;
  *	TODO extract CRUD operations
  *
  */
-public class AppPhase1 {
+public class OnlineAgendaMain {
 
 	private static OnlineAgenda onlineAgenda;
 	private static List<Integer> idList = new ArrayList<>();
