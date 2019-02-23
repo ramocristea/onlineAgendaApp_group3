@@ -100,6 +100,18 @@ public class JavaConventionsExample {
 			}return o1.getTargetCompletionDate().compareTo(o2.getTargetCompletionDate());
 			}
 				});
+		Collections.sort(list2, new Comparator<Task>() {@Override
+			public int compare(Task o1, Task o2) {if (o1.getTargetCompletionDate() == null && o2.getTargetCompletionDate() != null) {
+					return -1;
+			}return o1.getTargetCompletionDate().compareTo(o2.getTargetCompletionDate());
+			}
+				});
+		Collections.sort(list3, new Comparator<Task>() {@Override
+			public int compare(Task o1, Task o2) {if (o1.getTargetCompletionDate() == null && o2.getTargetCompletionDate() != null) {
+					return -1;
+			}return o1.getTargetCompletionDate().compareTo(o2.getTargetCompletionDate());
+			}
+				});
 		System.out.println("URGENT tasks for today:");
 		if (CollectionUtils.isEmpty(list1)) {
 		System.out.println("You have no URGENT tasks");} else {
