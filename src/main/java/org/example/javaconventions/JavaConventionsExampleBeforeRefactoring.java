@@ -1,4 +1,4 @@
-package org.example.JavaConventions;
+package org.example.javaconventions;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +14,7 @@ import org.example.onlineagendaapp.model.OnlineAgenda;
 import org.example.onlineagendaapp.model.Priority;
 import org.example.onlineagendaapp.model.Task;
 
-public class JavaConventionsExample {
+public class JavaConventionsExampleBeforeRefactoring {
 
 	public static void main(String[] args) {
 		AgendaCreation(); tasksintheagenda();
@@ -132,7 +132,5 @@ public class JavaConventionsExample {
 		{for (Task task : list3) {System.out.println(task.toString());
 			}
 			}
-
 	}
-
 }

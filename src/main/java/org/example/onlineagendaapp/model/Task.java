@@ -17,6 +17,13 @@ public class Task {
 		this.description = description;
 	}
 
+	public Task(int id, LocalDateTime targetCompletionDate, Priority priority, String description) {
+		this.id = id;
+		this.targetCompletionDate = targetCompletionDate;
+		this.priority = priority;
+		this.description = description;
+	}
+
 	public LocalDateTime getTargetCompletionDate() {
 		return targetCompletionDate;
 	}
